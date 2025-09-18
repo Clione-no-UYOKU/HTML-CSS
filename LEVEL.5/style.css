@@ -28,10 +28,21 @@ h1 {
     margin: 40px auto;
 }
 
-.mv_text {
+h2 {
+    font-size: 36px;
+    text-align: center;
+    margin: 100px 0 50px;
+}
+
+h2::before h2::after .mv_text {
     padding: 40px;
     background-color: #fff;
-    ;
+    width: 343px;
+}
+
+.eyecatch {
+    font-size: 36px;
+    font-weight: 500;
 }
 
 .sub_title {
@@ -39,5 +50,63 @@ h1 {
 }
 
 .mainvisual {
-    background: url(./images/bg_main.png);
+    background: url(/LEVEL.5/images/bg_main.png) no-repeat center center;
+    padding: 240px 0 80px;
+}
+
+main p {
+    margin: 20px 0;
+}
+
+main ul {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 10px;
+}
+
+main li {
+    background-color: #F5F5F5;
+    font-size: 12px;
+}
+
+main article {
+    margin-bottom: 100px;
+}
+
+footer {
+    padding: 100px 0;
+    color: #fff;
+    background: #1E1E1E;
+    text-align: center;
+}
+
+footer ul {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 20px 0;
+    text-align: start;
+}
+
+.border {
+    border-top: #fff 1px solid;
+    border-bottom: #fff 1px solid;
+    padding: 20px 0;
+}
+
+.company {
+    margin-bottom: 100px;
+    ;
+}
+
+@media (min-width:640px) {
+    .discussion {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 60px;
+    }
+
+    footer ul {
+        margin-left: 300px;
+        margin-right: 300px;
+    }
 }
