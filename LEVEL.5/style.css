@@ -37,3 +37,7 @@ h1 {
 .sub_title {
     margin-bottom: 30px;
 }
+
+.mainvisual {
+    background: url(./images/bg_main.png);
+}
