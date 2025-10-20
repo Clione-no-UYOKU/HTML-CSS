@@ -1,12 +1,24 @@
 @use "sass:math";
 
 $bs: (
+    "desktop": 1000px,
+    "br": 500px,
+    "sp": 300px,
 );
 
+@mixin mq($b: desktop) {
+    @media (#{map-get($bs, $b)} <=width) {
+        @content;
+    }
+}
 
+$color-text: #000000;
+$color-main: #E40065;
+$color-bg: #FFFFFF;
 
+$font-famly-base: "游ゴシック", "Yu Gothic", Helvetica, Arial, sans-serif;
 
-@mixin inner($mw: 800px, $w: percentage(math.div(560, 640))) {
+@mixin inner($mw: 1000px, $w: percentage(math.div(560, 640))) {
     max-width: $mw;
     width: $w;
     margin-left: auto;
@@ -30,6 +42,59 @@ $bs: (
     }
 }
 
+body {
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.7142857143;
+    letter-spacing: 0.1em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* header */
+.header {
+    padding: 40px 0;
+    text-align: center;
+    vertical-align: middle;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2F2F2F;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__span {
+        color: $color-main;
+    }
+}
+
+
+
+
+.header ul {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 30px;
+}
+
+.header li {
+    font-size: 12px;
+}
 
 /* philosophy */
 .philosophy {

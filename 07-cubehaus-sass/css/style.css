@@ -1,27 +1,67 @@
 body {
-    color: #000000;
-
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  letter-spacing: 0.1em;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
 
 /* header */
+.header {
+  padding: 40px 0;
+  text-align: center;
+  vertical-align: middle;
+}
+.header__inner {
+  max-width: 1000px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2F2F2F;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header__span {
+  color: #E40065;
+}
+
+.header ul {
+  display: grid;
+  grid-auto-flow: column;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+
+.header li {
+  font-size: 12px;
+}
 
 /* philosophy */
 .philosophy__title {
-    font-size: 32px;
-    text-align: center;
+  font-size: 32px;
+  text-align: center;
 }
-
 .philosophy__title::before {
-    content: "PHILOSOPHY";
-    display: block;
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 1.5;
+  content: "PHILOSOPHY";
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1;
 }
-
 .philosophy__title::after {
-    content: "";
+  content: "";
 }
-
 /*# sourceMappingURL=style.css.map */
